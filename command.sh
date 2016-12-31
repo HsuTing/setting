@@ -13,6 +13,16 @@ print_sign() {
   echo
 }
 
+print_command () {
+  printf "${color}\n"
+  print_sign ${#1} "#"
+  print_sign ${#1} " "
+  printf "#  %s  #\n" "$1"
+  print_sign ${#1} " "
+  print_sign ${#1} "#"
+  printf "${nocolor}\n"
+}
+
 exec_command () {
   printf "${color}\n"
   print_sign ${#1} "#"
