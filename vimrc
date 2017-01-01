@@ -60,6 +60,7 @@ endif
 
 " color
 Plugin 'flazz/vim-colorschemes'
+Plugin 'pangloss/vim-javascript'
 :colorscheme molokai
 let g:jsx_ext_required = 0
 
