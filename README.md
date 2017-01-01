@@ -1,5 +1,5 @@
 # Setting
-My setting of terminal.
+My setting of the terminal.
 
 ## Start
 
@@ -26,7 +26,7 @@ My setting of terminal.
 ## Environment
 
 - Ubuntu 16.04 LTS
-- Mac OS X 10.10
+- Mac OS X 10.12
 
 ## List
 
@@ -62,7 +62,6 @@ Use to upgrade package.
 - [flazz/vim-colorschemes](https://github.com/flazz/vim-colorschemes)
 
 #### nodejs
-- Check and install `nodejs`.
 - Check and install `npm`.
 - Check and install `yarn`.
 
