@@ -2,8 +2,8 @@
 
 . upgrade.sh
 . git.sh
-. vim.sh
 . nodejs.sh
+. vim.sh
 . bash.sh
 
 ## add other setting
