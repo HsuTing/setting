@@ -14,4 +14,3 @@ case $system in
       . mac.sh
       ;;
 esac
-
