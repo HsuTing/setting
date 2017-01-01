@@ -4,23 +4,24 @@ My setting of terminal.
 ## Start
 
 - You should install `git`, first.
-#### Ubuntu
-```sh
-sudo apt-get install git
-```
 
-#### Mac OS X
-```sh
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew install git
-```
+  #### Ubuntu
+  ```sh
+  sudo apt-get install git
+  ```
+
+  #### Mac OS X
+  ```sh
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  brew install git
+  ```
 
 - Then, you can install all setting.
-```sh
-cd && git clone https://github.com/HsuTing/setting.git
-cd setting && ./install.sh
-```
-Clone thie repo in the root folder.
+
+  ```sh
+  cd && git clone https://github.com/HsuTing/setting.git
+  cd setting && ./install.sh
+  ```
 
 ## Environment
 
