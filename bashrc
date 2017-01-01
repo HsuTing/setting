@@ -18,6 +18,16 @@ export PS1="\u@\h:\[\e[0;104m\]\$(parse_git_branch)\[\e[m\] \[\e[m\]\[\e[0;91m\]
 # add other bashrc
 . ~/setting/setting.sh
 
+# cd local
+cdlocal () {
+  case $system in
+    ($mac)
+      cd /Library/WebServer/Documents
+      ;;
+  esac
+}
+
+# other
 case $system in
   ($mac)
     # tab autocomplete
