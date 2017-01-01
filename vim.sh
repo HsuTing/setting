@@ -3,7 +3,6 @@
 . setting.sh
 . command.sh
 
-check_command git
 check_command vim
 check_command cmake
 
