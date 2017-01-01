@@ -58,9 +58,16 @@ if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
 
+" tag
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'elzr/vim-json'
+Plugin 'ramitos/jsctags'
+Plugin 'maksimr/vim-jsbeautify'
+let g:javascript_plugin_jsdoc = 1
+
 " color
 Plugin 'flazz/vim-colorschemes'
-Plugin 'pangloss/vim-javascript'
 :colorscheme molokai
 let g:jsx_ext_required = 0
 

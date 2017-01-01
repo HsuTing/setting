@@ -18,3 +18,6 @@ esac
 
 check_command npm
 check_command yarn
+
+# install packages
+npm install -g yo generator-cat

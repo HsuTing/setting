@@ -64,6 +64,8 @@ Use to upgrade package.
 #### nodejs
 - Check and install `npm`.
 - Check and install `yarn`.
+- Add [yeoman](http://yeoman.io/).
+- Add [generator-cat](https://github.com/HsuTing/generator-cat).
 
 #### bash
 - Add `.bashrc`.
