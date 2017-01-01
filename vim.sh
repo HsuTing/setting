@@ -21,6 +21,6 @@ if [ ! -e ~/.vim/bundle/Vundle.vim ]; then
   vim +PluginInstall +qall
 
   ## run other setting of vim plugins
-  cp -R ~/.vim/bundle/vim-colorschemes/colors/ ~/.vim
+  cp -R ~/.vim/bundle/vim-colorschemes/colors/ ~/.vim/colors
   ~/.vim/bundle/YouCompleteMe/install.py --tern-completer
 fi

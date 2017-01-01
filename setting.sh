@@ -3,4 +3,4 @@
 system=`uname -s`
 
 linux="Linux"
-mac="Mac OS X"
+mac="Darwin"

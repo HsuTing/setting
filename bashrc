@@ -16,7 +16,7 @@ function parse_git_branch {
 export PS1="\u@\h:\[\e[0;104m\]\$(parse_git_branch)\[\e[m\] \[\e[m\]\[\e[0;91m\][\d  \t]\[\e[m\] \[\e[0;96m\]\w\[\e[m\] \n>> "
 
 # add other bashrc
-. setting.sh
+. ~/setting/setting.sh
 
 case $system in
   ($mac)
