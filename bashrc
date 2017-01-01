@@ -1,5 +1,3 @@
-export CUSTOM_BASHRC=1
-
 # Set color
 export CLICOLOR=1
 export LSCOLORS=exfxcxdxbxegedabagacad
