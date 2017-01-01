@@ -27,6 +27,9 @@ cdlocal () {
   esac
 }
 
+# cd work
+alias cdwork='cd ~/Desktop/work'
+
 # other
 case $system in
   ($mac)
