@@ -16,7 +16,7 @@ My setting of terminal.
   brew install git
   ```
 
-- Then, you can install all setting.
+- Then, you can install all settings.
 
   ```sh
   cd && git clone https://github.com/HsuTing/setting.git
@@ -62,7 +62,7 @@ Use to upgrade package.
 - [flazz/vim-colorschemes](https://github.com/flazz/vim-colorschemes)
 
 #### nodejs
-- Check and install `node.js`.
+- Check and install `npm`.
 - Check and install `yarn`.
 
 #### bash

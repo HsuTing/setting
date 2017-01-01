@@ -3,7 +3,7 @@
 . command.sh
 
 print_command \
-"setting git"
+"set git"
 
 if ! git config user.name > /dev/null 2>&1; then
   printf "[git] username: "
