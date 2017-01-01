@@ -23,4 +23,6 @@ if [ ! -e ~/.vim/bundle/Vundle.vim ]; then
   ## run other setting of vim plugins
   cp -R ~/.vim/bundle/vim-colorschemes/colors/ ~/.vim/colors
   ~/.vim/bundle/YouCompleteMe/install.py --tern-completer
+  git clone https://github.com/powerline/fonts.git
+  . ~/setting/fonts/install.sh
 fi

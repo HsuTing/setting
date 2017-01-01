@@ -62,11 +62,12 @@ Use to upgrade package.
 - [flazz/vim-colorschemes](https://github.com/flazz/vim-colorschemes)
 
 #### nodejs
+- Check and install `nodejs`.
 - Check and install `npm`.
 - Check and install `yarn`.
 
 #### bash
-- Add `.bashrc`
+- Add `.bashrc`.
 
 #### mac
 - Add `brew`.
@@ -74,6 +75,6 @@ Use to upgrade package.
 - Check and install `tree`.
 - Check and install `bash-completion`.
 
-## Ubuntu
+## Problem
 
-- If `vim-airline` has font problem, you need to set the powerline font of terminal.
+- If `vim-airline` has font problem, you need to set the powerline font of the terminal.
