@@ -20,4 +20,11 @@ check_command npm
 check_command yarn
 
 # install packages
-npm install -g yo generator-cat
+case $system in
+  ($linux)
+    sudo npm install -g yo generator-cat
+    ;;
+  ($mac)
+    npm install -g yo generator-cat
+    ;;
+esac
