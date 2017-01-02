@@ -10,7 +10,11 @@
 . setting.sh
 
 case $system in
-    ($mac)
-      . mac.sh
-      ;;
+  ($linux)
+    . linux.sh
+    ;;
+
+  ($mac)
+    . mac.sh
+    ;;
 esac

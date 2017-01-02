@@ -19,6 +19,10 @@ export PS1="\u@\h:\[\e[0;104m\]\$(parse_git_branch)\[\e[m\] \[\e[m\]\[\e[0;91m\]
 # cd local
 cdlocal () {
   case $system in
+    ($linux)
+      cd /var/www/html
+      ;;
+
     ($mac)
       cd /Library/WebServer/Documents
       ;;

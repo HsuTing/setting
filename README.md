@@ -71,10 +71,12 @@ Use to upgrade package.
 - Add `.bashrc`.
 
 #### mac
-- Add `brew`.
 - Check and install `readline`.
 - Check and install `tree`.
 - Check and install `bash-completion`.
+
+#### linux
+- Check and install `apache2`
 
 ## Problem
 
