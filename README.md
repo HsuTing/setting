@@ -19,8 +19,8 @@ My setting of the terminal.
 - Then, you can install all settings.
 
   ```sh
-  cd && git clone https://github.com/HsuTing/setting.git
-  cd setting && ./install.sh
+  git clone https://github.com/HsuTing/setting.git ~/setting
+  ~/setting/install.sh
   ```
 
 ## Environment
