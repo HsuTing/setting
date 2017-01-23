@@ -1,5 +1,7 @@
 #!/bin/bash
 
+. setting.sh
+
 color="\033[0;34m"
 nocolor="\033[0m"
 
