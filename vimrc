@@ -71,5 +71,8 @@ Plugin 'flazz/vim-colorschemes'
 :colorscheme molokai
 let g:jsx_ext_required = 0
 
+" mark jinja
+Bundle 'lepture/vim-jinja'
+
 call vundle#end()
 filetype plugin indent on
