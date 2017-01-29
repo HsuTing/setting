@@ -32,6 +32,9 @@ alias cdsetting='cd ~/setting'
 dockerRun() {
   sudo docker run -t -i $1 /bin/bash
 }
+dockerBuild() {
+  sudo docker build -t="$1" .
+}
 
 # other
 case $system in
