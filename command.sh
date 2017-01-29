@@ -43,7 +43,7 @@ check_command () {
       ($linux)
         exec_command \
         "install $1" \
-        "sudo apt-get install $1"
+        "sudo apt-get install -y $1"
         ;;
 
       ($mac)

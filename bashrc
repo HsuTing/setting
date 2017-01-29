@@ -35,6 +35,18 @@ dockerRun() {
 dockerBuild() {
   sudo docker build -t="$1" .
 }
+dockerImages() {
+  sudo docker images
+}
+dockerContainers() {
+  sudo docker ps -a
+}
+dockerRm() {
+  sudo docker rm $(sudo docker ps -a -q)
+}
+dockerRmi() {
+  sudo docker rmi $(sudo docker images | grep "^<none>" | awk "{print $3}")
+}
 
 # other
 case $system in
