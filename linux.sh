@@ -14,12 +14,12 @@ if ! type "docker" > /dev/null 2>&1; then
   print_command \
   "Install docker"
 
-  sudo apt-get install curl \
-                       linux-image-extra-$(uname -r) \
-                       linux-image-extra-virtual
+  sudo apt-get install -y curl \
+                          linux-image-extra-$(uname -r) \
+                          linux-image-extra-virtual
 
-  sudo apt-get install apt-transport-https \
-                       ca-certificates
+  sudo apt-get install -y apt-transport-https \
+                          ca-certificates
 
   curl -fsSL https://yum.dockerproject.org/gpg | sudo apt-key add -
 
@@ -30,5 +30,5 @@ if ! type "docker" > /dev/null 2>&1; then
 
   sudo apt-get update
 
-  sudo apt-get -y install docker-engine
+  sudo apt-get install -y docker-engine
 fi
