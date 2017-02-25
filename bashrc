@@ -25,8 +25,22 @@ cdlocal () {
       ;;
   esac
 }
+setting () {
+  case $1 in
+    "install"|"-i")
+      cd ~/setting && ./install.sh
+      ;;
+
+    "update"|"-u")
+      cd ~/setting && git pull origin master
+      ;;
+
+    *)
+      cd ~/setting
+      ;;
+  esac
+}
 alias cdwork='cd ~/Desktop/work'
-alias cdsetting='cd ~/setting'
 
 ## docker
 dockerRun() {
