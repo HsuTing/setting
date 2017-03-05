@@ -13,7 +13,7 @@ case $system in
     fi
 
     rm -rf ~/.bash
-    ln bashrc ~/.bash
+    ln ~/setting/bash/bashrc ~/.bash
     ;;
 
   ($mac)
@@ -21,7 +21,7 @@ case $system in
       print_command \
       "add custom '.bashrc'"
 
-      ln bashrc ~/.bash_profile
+      ln ~/setting/bash/bashrc ~/.bash_profile
     fi
     ;;
 esac

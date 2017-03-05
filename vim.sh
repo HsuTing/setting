@@ -17,7 +17,7 @@ if [ ! -e ~/.vim/bundle/Vundle.vim ]; then
   "add '.vimrc' and vim plugins"
 
   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-  ln vimrc ~/.vimrc
+  ln ~/setting/vim/vimrc ~/.vimrc
   vim +PluginInstall +qall
 
   ## run other setting of vim plugins
@@ -25,7 +25,7 @@ if [ ! -e ~/.vim/bundle/Vundle.vim ]; then
   cp -R ~/.vim/bundle/vim-colorschemes/colors/ ~/.vim/colors
 
   ## YCM
-  cp ./tern-project ~/.tern-project
+  cp ~/setting/vim/tern-project ~/.tern-project
   ~/.vim/bundle/YouCompleteMe/install.py --tern-completer
 
   ## fonts
