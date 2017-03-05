@@ -42,6 +42,17 @@ setting () {
 }
 alias cdwork='cd ~/Desktop/work'
 alias cdenv='cd ~/Desktop/env'
+run-env () {
+  if [ -n "$1" ]; then
+    source ~/Desktop/env/$1.sh
+  fi
+}
+make-env() {
+  if [ -n "$1" ]; then
+    cp ~/setting/template-env.sh ~/Desktop/env/$1.sh
+    cdenv
+  fi
+}
 
 ## docker
 dockerRun() {
