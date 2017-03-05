@@ -41,6 +41,7 @@ setting () {
   esac
 }
 alias cdwork='cd ~/Desktop/work'
+alias cdenv='cd ~/Desktop/env'
 
 ## docker
 dockerRun() {

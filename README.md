@@ -69,6 +69,7 @@ Use to upgrade package.
 
 #### bash
 - Add `.bashrc`.
+- Add `work` and `env` folder.
 
 #### mac
 - Check and install `readline`.

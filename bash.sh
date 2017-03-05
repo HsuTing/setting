@@ -10,8 +10,10 @@ case $system in
       "add custom '.bashrc'"
 
       echo source ~/.bash >> ~/.bashrc
-      ln bashrc ~/.bash
     fi
+
+    rm -rf ~/.bash
+    ln bashrc ~/.bash
     ;;
 
   ($mac)
@@ -26,4 +28,8 @@ esac
 
 if [ ! -e ~/Desktop/work ]; then
   mkdir ~/Desktop/work
+fi
+
+if [ ! -e ~/Desktop/env ]; then
+  mkdir ~/Desktop/env
 fi
