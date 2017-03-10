@@ -17,12 +17,11 @@ case $system in
     ;;
 
   ($mac)
-    if [ ! -f ~/.bash_profile ]; then
-      print_command \
-      "add custom '.bashrc'"
+    print_command \
+    "add custom '.bashrc'"
 
-      ln ~/setting/bash/bashrc ~/.bash_profile
-    fi
+    rm -rf ~/.bash_profile
+    ln ~/setting/bash/bashrc ~/.bash_profile
     ;;
 esac
 
