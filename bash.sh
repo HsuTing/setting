@@ -32,3 +32,8 @@ fi
 if [ ! -e ~/Desktop/env ]; then
   mkdir ~/Desktop/env
 fi
+
+if [ ! -e ~/Desktop/server ]; then
+  mkdir ~/Desktop/server
+  mkdir ~/Desktop/server/key
+fi
