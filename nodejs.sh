@@ -22,9 +22,9 @@ check_command yarn
 # install packages
 case $system in
   ($linux)
-    sudo npm install -g yo generator-cat
+    sudo npm install -g yo generator-cat react-native
     ;;
   ($mac)
-    npm install -g yo generator-cat
+    npm install -g yo generator-cat react-native
     ;;
 esac
