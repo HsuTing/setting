@@ -1,5 +1,6 @@
 #!/bin/bash
 
+. setting.sh
 . command.sh
 
 check_command postgresql

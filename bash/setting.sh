@@ -1,14 +1,14 @@
 setting () {
   case $1 in
-    "--install"|"-i")
+    "--install")
       cd ~/setting && ./install.sh
       ;;
 
-    "--update"|"-u")
+    "--update")
       cd ~/setting && git pull origin master
       ;;
 
-    "--goto"|*)
+    "--goto")
       cd ~/setting
       ;;
   esac
@@ -20,7 +20,7 @@ _setting () {
   COMPREPLY=()
   cur="${COMP_WORDS[COMP_CWORD]}"
   prev="${COMP_WORDS[COMP_CWORD-1]}"
-  opts="-i -u --install --update --goto"
+  opts="--install --update --goto"
 
   if [[ ${cur} == * ]] ; then
     COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
