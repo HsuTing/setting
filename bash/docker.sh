@@ -20,7 +20,7 @@ docker-editor() {
       docker rm $(docker ps -a -q)
       ;;
 
-    "--rmi")
+    "--rm-none-images")
       docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
       ;;
   esac

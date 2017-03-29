@@ -2,6 +2,7 @@
 
 . command.sh
 
+check_command python
 check_command python3
 
 if ! type "pip" > /dev/null 2>&1; then
