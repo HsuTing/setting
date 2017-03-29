@@ -5,6 +5,7 @@
 . nodejs.sh
 . vim.sh
 . bash.sh
+. python.sh
 
 ## add other setting
 . setting.sh
