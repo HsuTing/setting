@@ -2,7 +2,7 @@ docker-editor() {
   case $1 in
     "--run")
       if [ -n "$2" ]; then
-        sudo docker run -t -i $2 /bin/bash
+        docker run -t -i $2 /bin/bash
       else
         echo "Need to give a name."
       fi
@@ -10,18 +10,18 @@ docker-editor() {
 
     "--build")
       if [ -n "$2" ]; then
-        sudo docker build -t="$2" .
+        docker build -t="$2" .
       else
         echo "Need to give a name."
       fi
       ;;
 
     "--rm")
-      sudo docker rm $(sudo docker ps -a -q)
+      docker rm $(docker ps -a -q)
       ;;
 
     "--rmi")
-      sudo docker rmi $(sudo docker images | grep "^<none>" | awk "{print $3}")
+      docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
       ;;
   esac
 }
@@ -31,9 +31,18 @@ _dockerEditor() {
   COMPREPLY=()
   cur="${COMP_WORDS[COMP_CWORD]}"
   prev="${COMP_WORDS[COMP_CWORD-1]}"
-  opts="--run --build --rm --rmi"
 
-  if [[ ${cur} == * ]] ; then
+  if [ ${prev} == docker-editor ]; then
+    opts="--run --build --rm --rmi"
+    COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
+    return 0
+  elif [ ${prev} == --run ] && [ ${prev} == --build ]; then
+    opts=""
+    for entry in "${PWD}"/*; do
+      filename=$(basename "$entry")
+      filename="${filename%.*}"
+      opts+=" $filename"
+    done
     COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
     return 0
   fi

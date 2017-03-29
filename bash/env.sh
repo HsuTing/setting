@@ -30,7 +30,16 @@ _runEnv () {
   prev="${COMP_WORDS[COMP_CWORD-1]}"
   opts="--run --make --goto"
 
-  if [[ ${cur} == * ]] ; then
+  if [ ${prev} == run-env ]; then
+    COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
+    return 0
+  elif [ ${prev} == --run ]; then
+    opts=""
+    for entry in "${HOME}/Desktop/env"/*; do
+      filename=$(basename "$entry")
+      filename="${filename%.*}"
+      opts+=" $filename"
+    done
     COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
     return 0
   fi
