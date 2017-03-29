@@ -13,9 +13,6 @@ case $system in
 esac
 
 if [ ! -e ~/.vim/bundle/Vundle.vim ]; then
-  print_command \
-  "add '.vimrc' and vim plugins"
-
   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
   ln ~/setting/vim/vimrc ~/.vimrc
   vim +PluginInstall +qall

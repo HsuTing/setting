@@ -2,9 +2,10 @@
 
 . command.sh
 
-check_command readline
 check_command tree
-check_command bash-completion
+if [ ! -f $(brew --prefix)/etc/bash_completion ]; then
+  check_command bash-completion
+fi
 
 ## set tern for vim
 cp ~/setting/vim/tern-project /Library/WebServer/Documents/.tern-project

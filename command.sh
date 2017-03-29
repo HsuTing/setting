@@ -2,38 +2,20 @@
 
 . setting.sh
 
-color="\033[0;34m"
+blue="\033[0;34m"
+green="\033[32m"
 nocolor="\033[0m"
 
-print_sign() {
-  printf "#"
-  for (( i = 0; i < $1 + 4; i++ ))
-  do
-    printf "%s" "$2"
-  done
-  printf "#"
-  echo
+print_title() {
+  printf "${green}# $1\n${nocolor}"
 }
 
 print_command () {
-  printf "${color}\n"
-  print_sign ${#1} "#"
-  print_sign ${#1} " "
-  printf "#  %s  #\n" "$1"
-  print_sign ${#1} " "
-  print_sign ${#1} "#"
-  printf "${nocolor}\n"
+  printf "${blue}## $1\n${nocolor}"
 }
 
 exec_command () {
-  printf "${color}\n"
-  print_sign ${#1} "#"
-  print_sign ${#1} " "
-  printf "#  %s  #\n" "$1"
-  print_sign ${#1} " "
-  print_sign ${#1} "#"
-  printf "${nocolor}\n"
-
+  print_command "$1"
   $2
 }
 

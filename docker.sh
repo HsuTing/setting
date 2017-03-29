@@ -7,7 +7,7 @@ if ! type "docker" > /dev/null 2>&1; then
   case $system in
     ($linux)
       print_command \
-      "Install docker"
+      "install docker"
 
       sudo apt-get install -y curl \
       linux-image-extra-$(uname -r) \
@@ -29,7 +29,7 @@ if ! type "docker" > /dev/null 2>&1; then
       ;;
     ($mac)
       print_command \
-      "Install docker: https://store.docker.com/editions/community/docker-ce-desktop-mac?tab=description"
+      "install docker: https://store.docker.com/editions/community/docker-ce-desktop-mac?tab=description"
       ;;
   esac
 fi

@@ -5,9 +5,6 @@
 
 case $system in
   ($linux)
-    print_command \
-    "set nodejs"
-
     if ! type "yarn" > /dev/null 2>&1; then
       curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
       echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list

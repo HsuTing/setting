@@ -6,9 +6,6 @@
 case $system in
   ($linux)
     if [ ! -f ~/.bash ]; then
-      print_command \
-      "add custom '.bashrc'"
-
       echo source ~/.bash >> ~/.bashrc
     fi
 
@@ -17,9 +14,6 @@ case $system in
     ;;
 
   ($mac)
-    print_command \
-    "add custom '.bashrc'"
-
     rm -rf ~/.bash_profile
     ln ~/setting/bash/bashrc ~/.bash_profile
     ;;
