@@ -36,15 +36,6 @@ _dockerEditor() {
     opts="--run --build --rm --rmi"
     COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
     return 0
-  elif [ ${prev} == --run ] || [ ${prev} == --build ]; then
-    opts=""
-    for entry in "${PWD}"/*; do
-      filename=$(basename "$entry")
-      filename="${filename%.*}"
-      opts+=" $filename"
-    done
-    COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
-    return 0
   fi
 }
 complete -F  _dockerEditor docker-editor
