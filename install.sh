@@ -6,6 +6,7 @@
 . vim.sh
 . bash.sh
 . python.sh
+. postgresql.sh
 
 ## add other setting
 . setting.sh
