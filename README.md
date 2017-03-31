@@ -34,13 +34,13 @@ My setting of the terminal.
 Use to upgrade package.
 
 #### git
-- Check and install `git`.
+- Install `git`.
 - Set `gitconfig`.
 
 #### vim
-- Check and install `git`.
-- Check and install `vim`.
-- Check and install `cmake`.
+- Install `git`.
+- Install `vim`.
+- Install `cmake`.
 - Add `.vimrc`.
 - [scrooloose/nerdtree](https://github.com/scrooloose/nerdtree)
   - Default: `Ctrl + G`.
@@ -62,22 +62,34 @@ Use to upgrade package.
 - [flazz/vim-colorschemes](https://github.com/flazz/vim-colorschemes)
 
 #### nodejs
-- Check and install `npm`.
-- Check and install `yarn`.
-- Add [yeoman](http://yeoman.io/).
-- Add [generator-cat](https://github.com/HsuTing/generator-cat).
+- Install `npm` and `yarn`.
+- Use `yarn` to install [yeoman](http://yeoman.io/), [generator-cat](https://github.com/HsuTing/generator-cat) and [create-react-native-app](https://github.com/react-community/create-react-native-app).
 
 #### bash
 - Add `.bashrc`.
-- Add `work` and `env` folder.
+- Add `work`, `server` and `env` folder.
+- New command:
+  - `docker-editor`: help to use `docker`.
+  - `run-env`: make and run `env`.
+  - `setting`: command about this project.
+
+#### python
+- Install `python`, `python3`, `pip` and `virtualenv`.
+
+#### postgresql
+- Install `postgresql`.
+
+#### docker
+- Install `docker`.
 
 #### mac
-- Check and install `readline`.
-- Check and install `tree`.
-- Check and install `bash-completion`.
+- Install `tree` and `bash-completion`.
+- Copy `.tern-project` to `web server`.
 
 #### linux
-- Check and install `apache2`
+- Install `apache2` and `tree`.
+- Change owner of `/var/www/html` to user.
+- Copy `.tern-project` to `apache server`.
 
 ## Problem
 
