@@ -20,14 +20,21 @@ case $system in
 esac
 
 if [ ! -e ~/Desktop/work ]; then
-  mkdir ~/Desktop/work
+  exec_command \
+  "make work folder" \
+  "mkdir ~/Desktop/work"
 fi
 
 if [ ! -e ~/Desktop/env ]; then
-  mkdir ~/Desktop/env
+  exec_command \
+  "make env folder" \
+  "mkdir ~/Desktop/env"
 fi
 
 if [ ! -e ~/Desktop/server ]; then
+  print_command \
+  "make server folder"
+
   mkdir ~/Desktop/server
   mkdir ~/Desktop/server/key
 fi

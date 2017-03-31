@@ -7,7 +7,7 @@ print_title "system"
 . upgrade.sh
 print_title "git"
 . git.sh
-print_title "nodejs"
+print_title "nodejs and yarn"
 . nodejs.sh
 print_title "vim"
 . vim.sh
