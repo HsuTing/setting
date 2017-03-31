@@ -76,9 +76,6 @@ Use to upgrade package.
 #### python
 - Install `python`, `python3`, `pip` and `virtualenv`.
 
-#### postgresql
-- Install `postgresql`.
-
 #### docker
 - Install `docker`.
 

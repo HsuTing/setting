@@ -15,8 +15,6 @@ print_title "bash"
 . bash.sh
 print_title "python"
 . python.sh
-print_title "postgresql"
-. postgresql.sh
 print_title "docker"
 . docker.sh
 
