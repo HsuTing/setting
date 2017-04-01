@@ -23,9 +23,11 @@ check_command yarn
 if ! type "yo" > /dev/null 2>&1; then
   exec_command \
   "install packages" \
-  "npm install -g yo generator-cat create-react-native-app react-vr-cli"
+  "yarn global add yo create-react-native-app react-vr-cli"
+  npm install -g generator-cat
 else
   exec_command \
   "update packages" \
-  "npm install -g yo generator-cat create-react-native-app react-vr-cli"
+  "yarn global upgrade yo create-react-native-app react-vr-cli"
+  npm install -g generator-cat
 fi
