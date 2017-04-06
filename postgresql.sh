@@ -26,4 +26,6 @@ if ! type "psql" > /dev/null 2>&1; then
   read db
 
   createdb $db
+else
+  check_command_exist psql
 fi

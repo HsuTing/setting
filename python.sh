@@ -14,3 +14,6 @@ if ! type "pip" > /dev/null 2>&1; then
   "install virtualenv" \
   "pip install virtualenv"
 fi
+
+check_command_exist pip
+check_command_exist virtualenv

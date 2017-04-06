@@ -29,3 +29,8 @@ if [ ! -e ~/.vim/bundle/Vundle.vim ]; then
   git clone https://github.com/powerline/fonts.git
   . ~/setting/fonts/install.sh
 fi
+
+check_folder_exist ~/.vim/bundle/Vundle.vim
+check_folder_exist ~/.vim/colors
+check_folder_exist ~/.tern-project
+check_folder_exist ~/setting/fonts

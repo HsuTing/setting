@@ -20,3 +20,6 @@ if ! type "git gr" > /dev/null 2>&1; then
   git config --global alias.gr "log --date=short --graph --pretty=format:'%C(yellow)%h%Creset %ad %C(bold green)%an%Creset %s%C(yellow)%d%Creset'"
   git config --global core.editor "vim"
 fi
+
+check_command_exist git
+check_command_exist git gr

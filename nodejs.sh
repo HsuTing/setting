@@ -31,3 +31,7 @@ else
   "yarn global upgrade yo create-react-native-app react-vr-cli"
   npm install -g generator-cat
 fi
+
+check_command_exist yo
+check_command_exist create-react-native-app
+check_command_exist react-vr

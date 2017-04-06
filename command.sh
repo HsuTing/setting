@@ -2,10 +2,6 @@
 
 . setting.sh
 
-blue="\033[0;34m"
-green="\033[32m"
-nocolor="\033[0m"
-
 print_title() {
   printf "${green}# $1\n${nocolor}"
 }
@@ -42,5 +38,31 @@ check_command () {
         "brew install $1"
         ;;
     esac
+  else
+    printf "${cyan}[checker] command \"$1\" is right.${nocolor}\n"
+  fi
+}
+
+check_command_exist() {
+  if ! type "$@" > /dev/null 2>&1; then
+    printf "${red}[checker] command not find: $item.${nocolor}\n"
+  else
+    printf "${cyan}[checker] command \"$@\" is right.${nocolor}\n"
+  fi
+}
+
+check_folder_exist() {
+  if [ ! -e "$@" ]; then
+    printf "${red}[checker] folder not find: $@.${nocolor}\n"
+  else
+    printf "${cyan}[checker] folder \"$@\" exits.${nocolor}\n"
+  fi
+}
+
+check_file_exist() {
+  if [ ! -f "$@" ]; then
+    printf "${red}[checker] file not find: $@.${nocolor}\n"
+  else
+    printf "${cyan}[checker] file \"$@\" exits.${nocolor}\n"
   fi
 }

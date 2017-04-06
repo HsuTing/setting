@@ -11,11 +11,15 @@ case $system in
 
     rm -rf ~/.bash
     ln ~/setting/bash/bashrc ~/.bash
+
+    check_file_exist ~/.bash
     ;;
 
   ($mac)
     rm -rf ~/.bash_profile
     ln ~/setting/bash/bashrc ~/.bash_profile
+
+    check_file_exist ~/.bash_profile
     ;;
 esac
 
@@ -38,3 +42,7 @@ if [ ! -e ~/Desktop/server ]; then
   mkdir ~/Desktop/server
   mkdir ~/Desktop/server/key
 fi
+
+check_folder_exist ~/Desktop/work
+check_folder_exist ~/Desktop/env
+check_folder_exist ~/Desktop/server
