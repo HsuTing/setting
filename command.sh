@@ -19,13 +19,21 @@ exec_command () {
   $2
 }
 
+install_command() {
+  if ! type "sudo" > /dev/null 2>&1; then
+    $@
+  else
+    sudo $@
+  fi
+}
+
 check_command () {
   if ! type "$1" > /dev/null 2>&1; then
     case $system in
       ($linux)
         exec_command \
         "install $1" \
-        "sudo apt-get install -y $1"
+        "install_command install -y $1"
         ;;
 
       ($mac)

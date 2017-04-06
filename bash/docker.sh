@@ -33,7 +33,7 @@ _dockerEditor() {
   prev="${COMP_WORDS[COMP_CWORD-1]}"
 
   if [ ${prev} == docker-editor ]; then
-    opts="--run --build --rm --rmi"
+    opts="--run --build --rm --rm-none-images"
     COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
     return 0
   fi

@@ -7,15 +7,23 @@ if ! type "psql" > /dev/null 2>&1; then
   check_command postgresql
 
   print_command \
-  "start postgres server"
+  "start postgresql server"
 
   case $system in
     ($linux)
-      sudo service postgresql start
+      install_command service postgresql start
       ;;
 
     ($mac)
       brew services start postgres
       ;;
   esac
+
+  print_command \
+  "set postgresql"
+
+  printf "[postgresql] name of database: "
+  read db
+
+  createdb $db
 fi

@@ -7,7 +7,7 @@ My setting of the terminal.
 
   #### Ubuntu
   ```sh
-  sudo apt-get install -y git
+  apt-get install -y git
   ```
 
   #### Mac OS X

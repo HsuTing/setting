@@ -9,23 +9,23 @@ if ! type "docker" > /dev/null 2>&1; then
       print_command \
       "install docker"
 
-      sudo apt-get install -y curl \
+      install_command apt-get install -y curl \
       linux-image-extra-$(uname -r) \
       linux-image-extra-virtual
 
-      sudo apt-get install -y apt-transport-https \
+      install_command apt-get install -y apt-transport-https \
       ca-certificates
 
-      curl -fsSL https://yum.dockerproject.org/gpg | sudo apt-key add -
+      curl -fsSL https://yum.dockerproject.org/gpg | install_command apt-key add -
 
-      sudo add-apt-repository \
+      install_command add-apt-repository \
       "deb https://apt.dockerproject.org/repo/ \
       ubuntu-$(lsb_release -cs) \
       main"
 
-      sudo apt-get update
+      install_command apt-get update
 
-      sudo apt-get install -y docker-engine
+      install_command apt-get install -y docker-engine
       ;;
     ($mac)
       print_command \
