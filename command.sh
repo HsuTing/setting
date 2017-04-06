@@ -45,7 +45,7 @@ check_command () {
 
 check_command_exist() {
   if ! type "$@" > /dev/null 2>&1; then
-    printf "${red}[checker] command not find: $item.${nocolor}\n"
+    printf "${red}[checker] command not find: $@.${nocolor}\n"
   else
     printf "${cyan}[checker] command \"$@\" is right.${nocolor}\n"
   fi
