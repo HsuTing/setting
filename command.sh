@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. setting.sh
+. ~/setting/setting.sh
 
 print_title() {
   printf "${green}# $1\n${nocolor}"

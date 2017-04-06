@@ -23,6 +23,12 @@ case $system in
     ;;
 esac
 
+if [ ! -e ~/Desktop ]; then
+  exec_command \
+  "make Desktop" \
+  "mkdir ~/Desktop"
+fi
+
 if [ ! -e ~/Desktop/work ]; then
   exec_command \
   "make work folder" \

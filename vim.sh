@@ -8,7 +8,9 @@ check_command cmake
 
 case $system in
   ($linux)
+    check_command build-essential
     check_command python-dev
+    check_command python3-dev
     ;;
 esac
 
