@@ -33,7 +33,7 @@ check_command () {
       ($linux)
         exec_command \
         "install $1" \
-        "install_command install -y $1"
+        "install_command apt-get install -y $1"
         ;;
 
       ($mac)
