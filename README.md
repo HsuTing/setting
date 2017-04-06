@@ -79,6 +79,9 @@ Use to upgrade package.
 #### docker
 - Install `docker`.
 
+#### postgresql
+- Install `postgresql`.
+
 #### mac
 - Install `tree` and `bash-completion`.
 - Copy `.tern-project` to `web server`.
