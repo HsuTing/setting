@@ -1,7 +1,7 @@
 #!/bin/bash
 
-. setting.sh
-. command.sh
+. ~/setting/setting.sh
+. ~/setting/command.sh
 
 if ! type "docker" > /dev/null 2>&1; then
   case $system in

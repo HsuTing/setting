@@ -1,32 +1,32 @@
 #!/bin/bash
 
-. setting.sh
-. command.sh
+. ~/setting/setting.sh
+. ~/setting/command.sh
 
 print_title "system"
-. upgrade.sh
+. ~/setting/upgrade.sh
 print_title "git"
-. git.sh
+. ~/setting/git.sh
 print_title "nodejs and yarn"
-. nodejs.sh
+. ~/setting/nodejs.sh
 print_title "vim"
-. vim.sh
+. ~/setting/vim.sh
 print_title "bash"
-. bash.sh
+. ~/setting/bash.sh
 print_title "python"
-. python.sh
+. ~/setting/python.sh
 print_title "docker"
-. docker.sh
+. ~/setting/docker.sh
 print_title "postgresql"
-. postgresql.sh
+. ~/setting/postgresql.sh
 
 print_title "other setting"
 case $system in
   ($linux)
-    . linux.sh
+    . ~/setting/linux.sh
     ;;
 
   ($mac)
-    . mac.sh
+    . ~/setting/mac.sh
     ;;
 esac

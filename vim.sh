@@ -1,7 +1,7 @@
 #!/bin/bash
 
-. setting.sh
-. command.sh
+. ~/setting/setting.sh
+. ~/setting/command.sh
 
 check_command vim
 check_command cmake

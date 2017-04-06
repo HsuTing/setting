@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. command.sh
+. ~/setting/command.sh
 
 if ! git config user.name > /dev/null 2>&1; then
   printf "[git] username: "

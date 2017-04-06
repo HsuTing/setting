@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. command.sh
+. ~/setting/command.sh
 
 check_command tree
 if [ ! -f $(brew --prefix)/etc/bash_completion ]; then

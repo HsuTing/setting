@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. command.sh
+. ~/setting/command.sh
 
 check_command python
 check_command python3

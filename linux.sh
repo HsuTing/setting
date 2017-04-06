@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. command.sh
+. ~/setting/command.sh
 
 check_command apache2
 check_command tree

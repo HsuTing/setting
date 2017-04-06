@@ -1,7 +1,7 @@
 #!/bin/bash
 
-. setting.sh
-. command.sh
+. ~/setting/setting.sh
+. ~/setting/command.sh
 
 case $system in
   ($linux)
