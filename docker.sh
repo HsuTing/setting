@@ -28,9 +28,9 @@ if ! type "docker" > /dev/null 2>&1; then
       stable"
 
       install_command apt-get update
-      install_command apt-get -f install
+      install_command apt-get -f -y install
 
-      install_command apt-get install docker-ce
+      install_command apt-get install -y docker-ce
       ;;
     ($mac)
       print_command \

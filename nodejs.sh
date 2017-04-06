@@ -12,7 +12,7 @@ case $system in
 
       curl -sL https://deb.nodesource.com/setup_7.x | install_command bash -
       check_command nodejs
-      check_command nodejs-legacy
+      install_command apt-get install -y nodejs-legacy
     fi
     ;;
 esac
