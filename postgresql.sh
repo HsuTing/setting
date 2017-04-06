@@ -3,7 +3,7 @@
 . setting.sh
 . command.sh
 
-if ! type "psql" > /dev/null 2>&1; then
+if [ ! type "psql" > /dev/null 2>&1 ]; then
   check_command postgresql
 
   print_command \

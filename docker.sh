@@ -3,7 +3,7 @@
 . setting.sh
 . command.sh
 
-if ! type "docker" > /dev/null 2>&1; then
+if [ ! type "docker" > /dev/null 2>&1 ]; then
   case $system in
     ($linux)
       print_command \

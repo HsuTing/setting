@@ -5,7 +5,7 @@
 
 case $system in
   ($linux)
-    if ! type "yarn" > /dev/null 2>&1; then
+    if [ ! type "yarn" > /dev/null 2>&1 ]; then
       curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | install_command apt-key add -
       echo "deb https://dl.yarnpkg.com/debian/ stable main" | install_command tee /etc/apt/sources.list.d/yarn.list
       install_command apt-get update
@@ -20,7 +20,7 @@ check_command npm
 check_command yarn
 
 # install packages
-if ! type "yo" > /dev/null 2>&1; then
+if [ ! type "yo" > /dev/null 2>&1 ]; then
   exec_command \
   "install packages" \
   "yarn global add yo create-react-native-app react-vr-cli"

@@ -16,7 +16,7 @@ exec_command () {
 }
 
 install_command() {
-  if ! type "sudo" > /dev/null 2>&1; then
+  if [ ! type "sudo" > /dev/null 2>&1 ]; then
     $@
   else
     sudo $@
@@ -24,7 +24,7 @@ install_command() {
 }
 
 check_command () {
-  if ! type "$1" > /dev/null 2>&1; then
+  if [ ! type "$1" > /dev/null 2>&1 ]; then
     case $system in
       ($linux)
         exec_command \
@@ -43,26 +43,44 @@ check_command () {
   fi
 }
 
+check_command_string() {
+  for string in $@; do
+    printf " ${string}"
+  done
+}
+
 check_command_exist() {
-  if ! type "$@" > /dev/null 2>&1; then
-    printf "${red}[checker] command not find: $@.${nocolor}\n"
+  if [ ! type "$@" > /dev/null 2>&1 ]; then
+    printf "${red}[checker] command not find:"
+    check_command_string $@
+    printf ".${nocolor}\n"
   else
-    printf "${cyan}[checker] command \"$@\" is right.${nocolor}\n"
+    printf "${cyan}[checker] command \""
+    check_command_string $@
+    printf " \" is right.${nocolor}\n"
   fi
 }
 
 check_folder_exist() {
   if [ ! -e "$@" ]; then
-    printf "${red}[checker] folder not find: $@.${nocolor}\n"
+    printf "${red}[checker] folder not find:"
+    check_command_string $@
+    printf ".${nocolor}\n"
   else
-    printf "${cyan}[checker] folder \"$@\" exits.${nocolor}\n"
+    printf "${cyan}[checker] folder \""
+    check_command_string $@
+    printf " \" exits.${nocolor}\n"
   fi
 }
 
 check_file_exist() {
   if [ ! -f "$@" ]; then
-    printf "${red}[checker] file not find: $@.${nocolor}\n"
+    printf "${red}[checker] file not find:"
+    check_command_string $@
+    printf ".${nocolor}\n"
   else
-    printf "${cyan}[checker] file \"$@\" exits.${nocolor}\n"
+    printf "${cyan}[checker] file \""
+    check_command_string $@
+    printf " \" exits.${nocolor}\n"
   fi
 }
