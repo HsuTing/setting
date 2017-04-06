@@ -44,43 +44,36 @@ check_command () {
 }
 
 check_command_string() {
+  count=1
   for string in $@; do
-    printf " ${string}"
+    printf "${string}"
+    if [ $count != $# ]; then
+      printf " "
+    fi
+    count=$((count + 1))
   done
 }
 
 check_command_exist() {
   if [ ! type "$@" > /dev/null 2>&1 ]; then
-    printf "${red}[checker] command not find:"
-    check_command_string $@
-    printf ".${nocolor}\n"
+    printf "${red}[checker] command not find: $(check_command_string $@).${nocolor}\n"
   else
-    printf "${cyan}[checker] command \""
-    check_command_string $@
-    printf " \" is right.${nocolor}\n"
+    printf "${cyan}[checker] command \"$(check_command_string $@)\" is right.${nocolor}\n"
   fi
 }
 
 check_folder_exist() {
   if [ ! -e "$@" ]; then
-    printf "${red}[checker] folder not find:"
-    check_command_string $@
-    printf ".${nocolor}\n"
+    printf "${red}[checker] folder not find: $(check_command_string $@).${nocolor}\n"
   else
-    printf "${cyan}[checker] folder \""
-    check_command_string $@
-    printf " \" exits.${nocolor}\n"
+    printf "${cyan}[checker] folder \"$(check_command_string $@)\" exits.${nocolor}\n"
   fi
 }
 
 check_file_exist() {
   if [ ! -f "$@" ]; then
-    printf "${red}[checker] file not find:"
-    check_command_string $@
-    printf ".${nocolor}\n"
+    printf "${red}[checker] file not find: $(check_command_string $@).${nocolor}\n"
   else
-    printf "${cyan}[checker] file \""
-    check_command_string $@
-    printf " \" exits.${nocolor}\n"
+    printf "${cyan}[checker] file \"$(check_command_string $@)\" exits.${nocolor}\n"
   fi
 }
