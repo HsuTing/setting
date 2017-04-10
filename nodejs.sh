@@ -8,9 +8,9 @@ case $system in
     if ! type "yarn" > /dev/null 2>&1; then
       curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | install_command apt-key add -
       echo "deb https://dl.yarnpkg.com/debian/ stable main" | install_command tee /etc/apt/sources.list.d/yarn.list
-      install_command apt-get update
 
       curl -sL https://deb.nodesource.com/setup_7.x | install_command bash -
+      install_command apt-get update
       check_command nodejs
       install_command apt-get install -y nodejs-legacy
     fi
