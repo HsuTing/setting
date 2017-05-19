@@ -1,3 +1,3 @@
 #!/bin/bash
 
-ssh username@ip -p port
+ssh -i ~/Desktop/server/key/key.pem username@ip -p port
