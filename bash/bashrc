@@ -26,10 +26,12 @@ cdlocal () {
   esac
 }
 alias cdwork='cd ~/Desktop/work'
-alias cdserver='cd ~/Desktop/server'
 
 ## env
 source ~/setting/bash/env.sh
+
+## server
+source ~/setting/bash/server.sh
 
 ## docker
 source ~/setting/bash/docker.sh
