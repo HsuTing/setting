@@ -27,9 +27,6 @@ cdlocal () {
 }
 alias cdwork='cd ~/Desktop/work'
 
-## env
-source ~/setting/bash/env.sh
-
 ## server
 source ~/setting/bash/server.sh
 

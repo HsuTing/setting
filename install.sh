@@ -17,8 +17,6 @@ print_title "python"
 . ~/setting/python.sh
 print_title "docker"
 . ~/setting/docker.sh
-print_title "postgresql"
-. ~/setting/postgresql.sh
 
 print_title "other setting"
 case $system in

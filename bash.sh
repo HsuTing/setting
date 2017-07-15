@@ -35,12 +35,6 @@ if [ ! -e ~/Desktop/work ]; then
   "mkdir ~/Desktop/work"
 fi
 
-if [ ! -e ~/Desktop/env ]; then
-  exec_command \
-  "make env folder" \
-  "mkdir ~/Desktop/env"
-fi
-
 if [ ! -e ~/Desktop/server ]; then
   print_command \
   "make server folder"
@@ -50,5 +44,4 @@ if [ ! -e ~/Desktop/server ]; then
 fi
 
 check_folder_exist ~/Desktop/work
-check_folder_exist ~/Desktop/env
 check_folder_exist ~/Desktop/server

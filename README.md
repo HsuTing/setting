@@ -67,10 +67,9 @@ Use to upgrade package.
 
 #### bash
 - Add `.bashrc`.
-- Add `work`, `server` and `env` folder.
+- Add `work` and `server` folder.
 - New command:
   - `docker-editor`: help to use `docker`.
-  - `run-env`: make and run `env`.
   - `setting`: command about this project.
 
 #### python
@@ -78,9 +77,6 @@ Use to upgrade package.
 
 #### docker
 - Install `docker`.
-
-#### postgresql
-- Install `postgresql`.
 
 #### mac
 - Install `tree` and `bash-completion`.
