@@ -39,7 +39,7 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 
 " auto remove whitespace
-Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'ntpeters/vim-better-whitespace'
 
 " a easy way to align code
 Plugin 'junegunn/vim-easy-align'
