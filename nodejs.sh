@@ -24,12 +24,12 @@ check_command yarn
 if ! type "yo" > /dev/null 2>&1; then
   exec_command \
   "install packages" \
-  "yarn global add yo create-react-native-app react-vr-cli"
+  "yarn global add yo create-react-native-app react-vr-cli npm-check"
   npm install -g generator-cat cat-time-tracker
 else
   exec_command \
   "update packages" \
-  "yarn global upgrade yo create-react-native-app react-vr-cli"
+  "yarn global upgrade yo create-react-native-app react-vr-cli npm-check"
   npm install -g generator-cat cat-time-tracker
 fi
 
