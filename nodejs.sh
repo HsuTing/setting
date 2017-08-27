@@ -21,18 +21,21 @@ check_command npm
 check_command yarn
 
 # install packages
+packages="yo create-react-native-app react-vr-cli cat-time-tracker npm-check"
 if ! type "yo" > /dev/null 2>&1; then
   exec_command \
   "install packages" \
-  "yarn global add yo create-react-native-app react-vr-cli npm-check"
-  npm install -g generator-cat cat-time-tracker
+  "yarn global add $packages"
+  npm install -g generator-cat
 else
   exec_command \
   "update packages" \
-  "yarn global upgrade yo create-react-native-app react-vr-cli npm-check"
-  npm install -g generator-cat cat-time-tracker
+  "yarn global upgrade $packages"
+  npm install -g generator-cat
 fi
 
 check_command_exist yo
 check_command_exist create-react-native-app
 check_command_exist react-vr
+check_command_exist time-tracker
+check_command_exist npm-check
