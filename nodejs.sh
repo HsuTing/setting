@@ -21,7 +21,13 @@ check_command npm
 check_command yarn
 
 # install packages
-packages="yo create-react-native-app react-vr-cli cat-time-tracker npm-check generator-cat"
+packages="yo \
+  create-react-native-app \
+  react-vr-cli \
+  cat-time-tracker \
+  npm-check \
+  generator-cat \
+  https://github.com/HsuTing/cat-bin.git"
 if ! type "yo" > /dev/null 2>&1; then
   exec_command \
   "install packages" \
