@@ -24,7 +24,6 @@ check_command yarn
 packages="yo \
   create-react-native-app \
   react-vr-cli \
-  cat-time-tracker \
   npm-check \
   generator-cat \
   https://github.com/HsuTing/cat-bin.git"
@@ -41,5 +40,4 @@ fi
 check_command_exist yo
 check_command_exist create-react-native-app
 check_command_exist react-vr
-check_command_exist time-tracker
 check_command_exist npm-check
