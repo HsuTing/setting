@@ -27,14 +27,10 @@ cdlocal () {
 }
 alias cdwork='cd ~/Desktop/work'
 
-## server
-source ~/setting/bash/server.sh
-
-## docker
-source ~/setting/bash/docker.sh
-
-# setting
-source ~/setting/bash/setting.sh
+source ~/setting/bash/server.sh ## server
+source ~/setting/bash/docker.sh ## docker
+source ~/setting/bash/setting.sh ## setting
+source ~/setting/bash/check.sh ## check
 
 # other
 case $system in

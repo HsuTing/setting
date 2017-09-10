@@ -11,6 +11,10 @@ setting () {
     "--goto")
       cd ~/setting
       ;;
+
+    *)
+      cd ~/setting
+      ;;
   esac
 }
 

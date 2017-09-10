@@ -24,8 +24,8 @@ check_command yarn
 packages="yo \
   create-react-native-app \
   react-vr-cli \
-  npm-check \
   generator-cat \
+  nsp \
   https://github.com/HsuTing/cat-bin.git"
 if ! type "yo" > /dev/null 2>&1; then
   exec_command \
@@ -40,4 +40,5 @@ fi
 check_command_exist yo
 check_command_exist create-react-native-app
 check_command_exist react-vr
-check_command_exist npm-check
+check_command_exist cat-bin
+check_command_exist nsp
