@@ -15,6 +15,9 @@ cat-check() {
     cat-bin npmignore
   fi
 
+  drawing-info "yarn upgrade interactive"
+  yarn upgrade-interactive
+
   drawing-info "npm package check"
   cat-bin check
 }
