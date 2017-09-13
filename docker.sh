@@ -9,7 +9,7 @@ if ! type "docker" > /dev/null 2>&1; then
       print_command \
       "install docker"
 
-      install_command apt-get install \
+      install_command apt-get install -y \
       apt-transport-https \
       ca-certificates \
       curl \
