@@ -30,7 +30,7 @@ fi
 
 if [ ! -e ~/setting/fonts ]; then
   ## fonts
-  git clone https://github.com/powerline/fonts.git --depth=1
+  git clone https://github.com/powerline/fonts.git ~/setting/fonts --depth=1
   . ~/setting/fonts/install.sh
 fi
 
