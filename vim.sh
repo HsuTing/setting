@@ -26,9 +26,11 @@ if [ ! -e ~/.vim/bundle/Vundle.vim ]; then
   ## YCM
   cp ~/setting/vim/tern-project ~/.tern-project
   ~/.vim/bundle/YouCompleteMe/install.py --tern-completer
+fi
 
+if [ ! -e ~/setting/fonts ]; then
   ## fonts
-  git clone https://github.com/powerline/fonts.git
+  git clone https://github.com/powerline/fonts.git --depth=1
   . ~/setting/fonts/install.sh
 fi
 

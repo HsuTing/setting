@@ -30,9 +30,10 @@ if [ ! -e ~/Desktop ]; then
 fi
 
 if [ ! -e ~/Desktop/work ]; then
-  exec_command \
-  "make work folder" \
-  "mkdir ~/Desktop/work"
+  print_command \
+  "make work folder"
+
+  mkdir ~/Desktop/work
 fi
 
 if [ ! -e ~/Desktop/server ]; then

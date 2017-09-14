@@ -12,4 +12,5 @@ fi
 ## set tern for vim
 cp ~/setting/vim/tern-project /Library/WebServer/Documents/.tern-project
 
+sudo chown -R $USER /Library/WebServer/Documents/
 check_file_exist /Library/WebServer/Documents/.tern-project
