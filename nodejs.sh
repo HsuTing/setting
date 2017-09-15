@@ -19,6 +19,7 @@ esac
 
 check_command npm
 check_command yarn
+check_command watchman
 
 # install packages
 packages="yo \
