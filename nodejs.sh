@@ -14,6 +14,18 @@ case $system in
       check_command nodejs
       install_command apt-get install -y nodejs-legacy
     fi
+
+    if ! type "watchman" > /dev/null 2>&1; then
+      git clone https://github.com/facebook/watchman.git
+      cd watchman
+      git checkout v4.7.0  # the latest stable release
+      ./autogen.sh
+      ./configure
+      make
+      install_command make install
+      cd ./../
+      rm -rf ./watchman
+    fi
     ;;
 esac
 
