@@ -26,6 +26,7 @@ cdlocal () {
   esac
 }
 alias cdwork='cd ~/Desktop/work'
+alias count='git ls-files | xargs wc -l'
 
 source ~/setting/bash/server.sh ## server
 source ~/setting/bash/docker.sh ## docker
