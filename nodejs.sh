@@ -39,6 +39,7 @@ packages="yo \
   react-vr-cli \
   generator-cat \
   nsp \
+  git-open \
   https://github.com/HsuTing/cat-bin.git"
 if ! type "yo" > /dev/null 2>&1; then
   exec_command \

@@ -46,3 +46,4 @@ esac
 
 export PATH="$HOME/.yarn/bin:$PATH"
 export PATH="$PATH:$HOME/.config/yarn/global/node_modules/.bin"
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
