@@ -27,6 +27,7 @@ cdlocal () {
 }
 alias cdwork='cd ~/Desktop/work'
 alias count='git ls-files | xargs wc -l'
+alias bbs='ssh bbsu@ptt.cc'
 
 source ~/setting/bash/server.sh ## server
 source ~/setting/bash/docker.sh ## docker
