@@ -20,3 +20,17 @@ git config --global alias.gr "log --date=short --graph --pretty=format:'%C(yello
 git config --global core.editor "vim"
 
 check_command_exist git
+
+
+#### add ghi
+case $system in
+  ($linux)
+    curl -sL https://raw.githubusercontent.com/stephencelis/ghi/master/ghi > ghi && \
+    chmod 755 ghi && \
+    mv ghi /usr/local/bin
+    ;;
+
+  ($mac)
+    check_command ghi
+    ;;
+esac
