@@ -26,9 +26,9 @@ _setting () {
   COMPREPLY=()
   cur="${COMP_WORDS[COMP_CWORD]}"
   prev="${COMP_WORDS[COMP_CWORD-1]}"
-  opts="--install --update --goto"
 
-  if [[ ${cur} == * ]]; then
+  if [ ${prev} == setting ]; then
+    opts="--install --update --goto"
     COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
     return 0
   fi

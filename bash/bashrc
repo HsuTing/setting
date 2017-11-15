@@ -14,23 +14,14 @@ export PS1="\u@\h:\[\e[0;104m\]\$(parse_git_branch)\[\e[m\] \[\e[m\]\[\e[0;91m\]
 # add other bashrc
 . ~/setting/setting.sh
 
-cdlocal () {
-  case $system in
-    ($linux)
-      cd /var/www/html
-      ;;
-
-    ($mac)
-      cd /Library/WebServer/Documents
-      ;;
-  esac
-}
-alias cdwork='cd ~/Desktop/work'
 alias count='git ls-files | xargs wc -l'
 alias bbs='ssh bbsu@ptt.cc'
 
-source ~/setting/bash/server.sh ## server
-source ~/setting/bash/docker.sh ## docker
+source ~/setting/bash/work.sh ## cdwork
+source ~/setting/bash/local.sh ## cdlocal
+source ~/setting/bash/server.sh ## run-server
+source ~/setting/bash/env.sh ## run-env
+source ~/setting/bash/docker.sh ## docker-editor
 source ~/setting/bash/setting.sh ## setting
 source ~/setting/bash/check.sh ## check
 

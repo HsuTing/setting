@@ -1,8 +1,8 @@
-run-server () {
+run-env () {
   case $1 in
     "--run")
       if [ -n "$2" ]; then
-        sh ~/Desktop/server/$2.sh
+        source ~/Desktop/env/$2.sh
       else
         echo "Need to give a name."
       fi
@@ -10,8 +10,8 @@ run-server () {
 
     "--make")
       if [ -n "$2" ]; then
-        cp ~/setting/template/server.sh ~/Desktop/server/$2.sh
-        cd ~/Desktop/server
+        cp ~/setting/template/env.sh ~/Desktop/env/$2.sh
+        cd ~/Desktop/env
         vim $2.sh
       else
         echo "Need to give a name."
@@ -19,24 +19,24 @@ run-server () {
       ;;
 
     "--goto")
-      cd ~/Desktop/server
+      cd ~/Desktop/env
       ;;
   esac
 }
 
-_runServer () {
+_runEnv () {
   local cur prev opts
   COMPREPLY=()
   cur="${COMP_WORDS[COMP_CWORD]}"
   prev="${COMP_WORDS[COMP_CWORD-1]}"
 
-  if [ ${prev} == run-server ]; then
+  if [ ${prev} == run-env ]; then
     opts="--run --make --goto"
     COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
     return 0
   elif [ ${prev} == --run ]; then
     opts=""
-    for entry in "${HOME}/Desktop/server"/*; do
+    for entry in "${HOME}/Desktop/env"/*; do
       filename=$(basename "$entry")
       filename="${filename%.*}"
       if [ $filename == key ]; then
@@ -48,4 +48,4 @@ _runServer () {
     return 0
   fi
 }
-complete -F _runServer run-server
+complete -F _runEnv run-env
