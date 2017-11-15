@@ -9,7 +9,7 @@ if ! type "docker" > /dev/null 2>&1; then
       print_command \
       "install docker"
 
-      install_command apt-get install -y \
+      install_command apt install -y \
       apt-transport-https \
       ca-certificates \
       curl \
@@ -23,10 +23,10 @@ if ! type "docker" > /dev/null 2>&1; then
       $(lsb_release -cs) \
       stable"
 
-      install_command apt-get update
-      install_command apt-get -f -y install
+      install_command apt update
+      install_command apt -f -y install
 
-      install_command apt-get install -y docker-ce
+      install_command apt install -y docker-ce
       ;;
     ($mac)
       print_command \

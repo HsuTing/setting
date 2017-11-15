@@ -7,7 +7,7 @@ My setting of the terminal.
 
   #### Ubuntu
   ```sh
-  apt-get install -y git
+  apt install -y git
   ```
 
   #### Mac OS X
@@ -34,13 +34,11 @@ My setting of the terminal.
 Use to upgrade package.
 
 #### git
-- Install `git`.
+- Install `ghi`.
 - Set `gitconfig`.
 
 #### vim
-- Install `git`.
-- Install `vim`.
-- Install `cmake`.
+- Install `vim` and `cmake`.
 - Add `.vimrc`.
 - [scrooloose/nerdtree](https://github.com/scrooloose/nerdtree)
   - Default: `Ctrl + G`.
@@ -62,24 +60,35 @@ Use to upgrade package.
 - [flazz/vim-colorschemes](https://github.com/flazz/vim-colorschemes)
 
 #### nodejs
-- Install `npm` and `yarn`.
-- Use `yarn` to install [yeoman](http://yeoman.io/), [generator-cat](https://github.com/HsuTing/generator-cat) and [create-react-native-app](https://github.com/react-community/create-react-native-app).
+- Install `npm`, `yarn` and `watchman`.
+- Install packages:
+ - yo
+ - react-vr-cli
+ - generator-cat
+ - nsp
+ - git-open
+ - https://github.com/HsuTing/cat-bin.git
 
 #### bash
-- Add `.bashrc`.
-- Add `work` and `server` folder.
-- New command:
+- Add `work`, `server` and `env` folder.
+- New commands:
+  - `count`: count the code line of the project.
+  - `cdwork`: command about work folder.
+  - `cdloacl`: command about local folder which is used to build local server.
+  - `run-server`: command about server folder whose files are used to run `ssh`. 
+  - `run-env`: command about env folder whose files are used to set `env`.
   - `docker-editor`: help to use `docker`.
   - `setting`: command about this project.
+  - `check`: check project.
 
 #### python
-- Install `python`, `python3`, `pip` and `virtualenv`.
+- Install `python`, `python3`, `pip`, `virtualenv`, and `glances`.
 
 #### docker
 - Install `docker`.
 
 #### mac
-- Install `tree` and `bash-completion`.
+- Install `tree`.
 - Copy `.tern-project` to `web server`.
 
 #### linux

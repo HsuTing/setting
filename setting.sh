@@ -5,8 +5,17 @@ system=`uname -s`
 linux="Linux"
 mac="Darwin"
 
-blue="\033[0;34m"
-green="\033[32m"
-red="\033[0;31m"
-cyan="\033[0;36m"
-nocolor="\033[0m"
+blue="\e[0;34m"
+green="\e[32m"
+red="\e[0;31m"
+cyan="\e[0;36m"
+darkGray="\e[90m"
+nocolor="\e[0m"
+
+greenBg="\e[42m"
+redBg="\e[41m"
+yellowBg="\e[43m"
+nocolorBg="\e[49m"
+
+bold="\e[1m"
+normal="\e[21m"

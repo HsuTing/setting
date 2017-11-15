@@ -10,9 +10,9 @@ case $system in
       echo "deb https://dl.yarnpkg.com/debian/ stable main" | install_command tee /etc/apt/sources.list.d/yarn.list
 
       curl -sL https://deb.nodesource.com/setup_7.x | install_command bash -
-      install_command apt-get update
+      install_command apt update
       check_command nodejs
-      install_command apt-get install -y nodejs-legacy
+      install_command apt install -y nodejs-legacy
     fi
 
     if ! type "watchman" > /dev/null 2>&1; then
