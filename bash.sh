@@ -52,5 +52,5 @@ if [ ! -e ~/Desktop/server ]; then
 fi
 
 check_folder_exist ~/Desktop/work
-check_folder_exist ~/Desktop/server
 check_folder_exist ~/Desktop/env
+check_folder_exist ~/Desktop/server

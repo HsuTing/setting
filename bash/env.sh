@@ -37,11 +37,8 @@ _runEnv () {
   elif [ ${prev} == --run ]; then
     opts=""
     for entry in "${HOME}/Desktop/env"/*; do
-      filename=$(basename "$entry")
+      filename=( $(basename "$entry") )
       filename="${filename%.*}"
-      if [ $filename == key ]; then
-        continue
-      fi
       opts+=" $filename"
     done
     COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )

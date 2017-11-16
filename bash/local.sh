@@ -23,11 +23,8 @@ _cdLocal () {
   if [ ${prev} == cdlocal ]; then
     opts=""
     for entry in "${localPath}"/*; do
-      filename=$(basename "$entry")
+      filename=( $(basename "$entry") )
       filename="${filename%.*}"
-      if [ $filename == key ]; then
-        continue
-      fi
       opts+=" $filename"
     done
     COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )

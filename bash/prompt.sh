@@ -32,6 +32,18 @@ function get_virtual_env() {
   fi
 }
 
+# get notes
+function get_notes() {
+  notes=( $(cat ~/.note) )
+  num=${#notes[@]}
+
+  if [ "${num}" == 0 ]; then
+    printf ""
+  else
+    printf "${cyanBg} ${num} notes ${nocolorBg} "
+  fi
+}
+
 # error
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 function nonzero_return() {
@@ -47,4 +59,4 @@ symbol="${green}➜${nocolor} "
 dirPath="${cyan}\w${nocolor} "
 time="${blue}[\t]${nocolor} "
 
-export PS1="\[\$(nonzero_return)\]\[${time}\]\[${dirPath}${gitBranch}\]\n\[\$(get_virtual_env)\]${symbol}"
+export PS1="\[\$(nonzero_return)\]\[${time}\]\[${dirPath}\[\$(get_notes)\]${gitBranch}\]\n\[\$(get_virtual_env)\]${symbol}"

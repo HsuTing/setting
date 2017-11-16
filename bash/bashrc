@@ -20,6 +20,7 @@ source ~/setting/bash/env.sh ## run-env
 source ~/setting/bash/docker.sh ## docker-editor
 source ~/setting/bash/setting.sh ## setting
 source ~/setting/bash/check.sh ## check
+source ~/setting/bash/note.sh ## note
 
 # other
 case $system in

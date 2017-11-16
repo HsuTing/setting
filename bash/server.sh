@@ -37,7 +37,7 @@ _runServer () {
   elif [ ${prev} == --run ]; then
     opts=""
     for entry in "${HOME}/Desktop/server"/*; do
-      filename=$(basename "$entry")
+      filename=( $(basename "$entry") )
       filename="${filename%.*}"
       if [ $filename == key ]; then
         continue

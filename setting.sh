@@ -15,6 +15,7 @@ nocolor="\e[0m"
 greenBg="\e[42m"
 redBg="\e[41m"
 yellowBg="\e[43m"
+cyanBg="\e[46m"
 nocolorBg="\e[49m"
 
 bold="\e[1m"

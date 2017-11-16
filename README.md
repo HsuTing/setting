@@ -80,6 +80,7 @@ Use to upgrade package.
   - `docker-editor`: help to use `docker`.
   - `setting`: command about this project.
   - `check`: check project.
+  - `note`: add notes.
 
 #### python
 - Install `python`, `python3`, `pip`, `virtualenv`, and `glances`.
