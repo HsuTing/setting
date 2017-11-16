@@ -1,7 +1,7 @@
 setting () {
   case $1 in
     "--install")
-      root=$(pwd)
+      local root=$(pwd)
       cd ~/setting && ./install.sh
       cd $root
       ;;

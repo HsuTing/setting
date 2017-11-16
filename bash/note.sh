@@ -2,7 +2,11 @@ note () {
   case $1 in
     "--list")
       if [ -f ~/.note ]; then
-        notes=( $(cat ~/.note) )
+        local notes=()
+
+        while read line; do
+          notes+=( "${line}" )
+        done < ~/.note
 
         for i in "${!notes[@]}"; do
           printf "#%s %s\n" "$i" "${notes[$i]}"
@@ -13,7 +17,12 @@ note () {
     "--done")
       if [ -f ~/.note ]; then
         if [ -n "$2" ]; then
-          notes=( $(cat ~/.note) )
+          local notes=()
+
+          while read line; do
+            notes+=( "${line}" )
+          done < ~/.note
+
           if [ "${#notes[@]}" == 0 ]; then
             printf "${red}✘${nocolor} notes is empty\n"
           elif [ "${notes[$2]}" == "" ]; then
@@ -39,9 +48,11 @@ note () {
         printf "${darkGray}(add note)${nocolor} ${symbol}"
         read context
 
-        notes=()
+        local notes=()
         if [ -f ~/.note ]; then
-          notes=( $( cat ~/.note ) )
+          while read line; do
+            notes+=( "${line}" )
+          done < ~/.note
         fi
         notes+=( "${context}" )
 

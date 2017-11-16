@@ -1,12 +1,12 @@
 # get current branch in git repo
 function parse_git_branch() {
-  branch=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
+  local branch=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
 
   if [ ! "${branch}" == "" ]; then
-    status=`git status 2>&1 | tee`
-    isModified=`echo -n "${status}" 2> /dev/null | grep "modified:" &> /dev/null; echo "$?"`
-    isAhead=`echo -n "${status}" 2> /dev/null | grep "Your branch is ahead of" &> /dev/null; echo "$?"`
-    isDifferent=`echo -n "${status}" 2> /dev/null | grep "different commits" &> /dev/null; echo "$?"`
+    local status=`git status 2>&1 | tee`
+    local isModified=`echo -n "${status}" 2> /dev/null | grep "modified:" &> /dev/null; echo "$?"`
+    local isAhead=`echo -n "${status}" 2> /dev/null | grep "Your branch is ahead of" &> /dev/null; echo "$?"`
+    local isDifferent=`echo -n "${status}" 2> /dev/null | grep "different commits" &> /dev/null; echo "$?"`
 
     if [ "${isModified}" == "0" ]; then
       printf "${redBg} ± ${branch} ${nocolorBg}"
@@ -23,9 +23,10 @@ function parse_git_branch() {
 }
 
 # get Virtual Env
+export VIRTUAL_ENV_DISABLE_PROMPT=1
 function get_virtual_env() {
   if [[ $VIRTUAL_ENV != "" ]]; then
-    envName=`basename ${VIRTUAL_ENV}`
+    local envName=`basename ${VIRTUAL_ENV}`
     printf "${darkGray}(${envName})${nocolor} "
   else
     printf ""
@@ -34,8 +35,13 @@ function get_virtual_env() {
 
 # get notes
 function get_notes() {
-  notes=( $(cat ~/.note) )
-  num=${#notes[@]}
+  local notes=()
+  if [ -f ~/.note ]; then
+    while read line; do
+      notes+=( "${line}" )
+    done < ~/.note
+  fi
+  local num=${#notes[@]}
 
   if [ "${num}" == 0 ]; then
     printf ""
@@ -45,9 +51,8 @@ function get_notes() {
 }
 
 # error
-export VIRTUAL_ENV_DISABLE_PROMPT=1
 function nonzero_return() {
-	RETVAL=$?
+	local RETVAL=$?
 
   if [[ $RETVAL -ne 0 ]]; then
     printf "${red}(✘)${nocolor} "
