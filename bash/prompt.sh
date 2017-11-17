@@ -9,8 +9,9 @@ function parse_git_branch() {
     local isDifferent=`echo -n "${status}" 2> /dev/null | grep "different commits" &> /dev/null; echo "$?"`
     local isNewFile=`echo -n "${status}" 2> /dev/null | grep "new file:" &> /dev/null; echo "$?"`
     local isUntracked=`echo -n "${status}" 2> /dev/null | grep "Untracked files" &> /dev/null; echo "$?"`
+    local isDeleted=`echo -n "${status}" 2> /dev/null | grep "deleted:" &> /dev/null; echo "$?"`
 
-    if [ "${isModified}" == "0" ] || [ "${isAddFile}" == "0" ] || [ "${isUntracked}" == "0" ] ; then
+    if [ "${isModified}" == "0" ] || [ "${isAddFile}" == "0" ] || [ "${isUntracked}" == "0" ] || [ "${isDeleted}" == "0" ]; then
       printf "${redBg} ± ${branch} ${nocolorBg}"
     elif [ "${isAhead}" == "0" ]; then
       printf "${yellowBg} ➦ ${branch} ${nocolorBg}"
