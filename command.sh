@@ -3,11 +3,11 @@
 . ~/setting/setting.sh
 
 print_title() {
-  printf "${green}# $1\n${nocolor}"
+  printf "${greenBg} $1 ${nocolorBg}\n"
 }
 
 print_command () {
-  printf "${blue}## $1\n${nocolor}"
+  printf "${blue}● $1${nocolor}\n"
 }
 
 exec_command () {
@@ -21,6 +21,14 @@ install_command() {
   else
     sudo $@
   fi
+}
+
+error() {
+  printf "${red}✘  $1${nocolor}\n"
+}
+
+ok() {
+  printf "${green}✔${nocolor}  $1\n"
 }
 
 check_command () {
@@ -39,30 +47,30 @@ check_command () {
         ;;
     esac
   else
-    printf "${cyan}[checker] command \"$1\" is right.${nocolor}\n"
+    ok $1
   fi
 }
 
 check_command_exist() {
   if ! type "$@" > /dev/null 2>&1; then
-    printf "${red}[checker] command not find: $1.${nocolor}\n"
+    error $1
   else
-    printf "${cyan}[checker] command \"$1\" is right.${nocolor}\n"
+    ok $1
   fi
 }
 
 check_folder_exist() {
   if [ ! -e "$@" ]; then
-    printf "${red}[checker] folder not find: $1.${nocolor}\n"
+    error $1
   else
-    printf "${cyan}[checker] folder \"$1\" exits.${nocolor}\n"
+    ok $1
   fi
 }
 
 check_file_exist() {
   if [ ! -f "$@" ]; then
-    printf "${red}[checker] file not find: $1.${nocolor}\n"
+    error $1
   else
-    printf "${cyan}[checker] file \"$1\" exits.${nocolor}\n"
+    ok $1
   fi
 }

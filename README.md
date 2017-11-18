@@ -67,7 +67,7 @@ Use to upgrade package.
  - generator-cat
  - nsp
  - git-open
- - https://github.com/HsuTing/cat-bin.git
+ - git+ssh://git@github.com:HsuTing/cat-bin.git
 
 #### bash
 - Add `work`, `server` and `env` folder.
