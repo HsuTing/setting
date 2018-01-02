@@ -41,6 +41,7 @@ packages="yo \
   nsp \
   git-open \
   commitizen \
+  conventional-changelog \
   git+ssh://git@github.com:HsuTing/cat-bin.git"
 if ! type "yo" > /dev/null 2>&1; then
   exec_command \

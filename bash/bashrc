@@ -11,6 +11,7 @@ export GREP_OPTIONS='--color=auto'
 alias count='git ls-files | xargs wc -l'
 alias bbs='ssh bbsu@ptt.cc'
 alias commitInit='commitizen init cz-conventional-changelog --save --save-exact'
+alias makeLog='conventional-changelog -p angular -i CHANGELOG.md -s -r 0'
 
 source ~/setting/bash/prompt.sh
 
