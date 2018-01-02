@@ -15,12 +15,7 @@ if ! type "pip" > /dev/null 2>&1; then
   print_command \
   "install virtualenv"
   pip install virtualenv
-
-  print_command \
-  "install glances"
-  pip install glances
 fi
 
 check_command_exist pip
 check_command_exist virtualenv
-check_command_exist glances
