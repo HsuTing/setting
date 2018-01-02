@@ -40,6 +40,7 @@ packages="yo \
   generator-cat \
   nsp \
   git-open \
+  commitizen \
   git+ssh://git@github.com:HsuTing/cat-bin.git"
 if ! type "yo" > /dev/null 2>&1; then
   exec_command \
