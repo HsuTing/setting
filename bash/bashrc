@@ -24,6 +24,10 @@ source ~/setting/bash/setting.sh ## setting
 source ~/setting/bash/check.sh ## check
 source ~/setting/bash/note.sh ## note
 
+if [ -f ~/setting/bash/custom.sh ]; then
+  source ~/setting/bash/custom.sh ## custom command
+fi
+
 # other
 case $system in
   ($mac)

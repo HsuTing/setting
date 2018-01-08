@@ -1,3 +1,4 @@
 fonts
 *.swp
 node_modules
+bash/custom.sh
