@@ -1,0 +1,8 @@
+{
+  "name": "setting",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:HsuTing/setting.git",
+  "author": "HsuTing <hsuting0106@gmail.com>",
+  "license": "MIT"
+}

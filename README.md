@@ -63,9 +63,13 @@ Use to upgrade package.
 - Install `npm`, `yarn` and `watchman`.
 - Install packages:
  - yo
+ - create-react-native-app
  - react-vr-cli
- - generator-cat
  - nsp
+ - commitizen
+ - cz-conventional-changelog
+ - conventional-changelog
+ - generator-cat
  - git-open
  - git+ssh://git@github.com:HsuTing/cat-bin.git
 
