@@ -9,10 +9,12 @@ else
   check_file_exist $(brew --prefix)/etc/bash_completion
 fi
 
-## set tern for vim
 sudo chown -R $USER /Library/WebServer/Documents/
+
 cp ~/setting/vim/tern-project /Library/WebServer/Documents/.tern-project
+cp ~/setting/nodejs/czrc /Library/WebServer/Documents/.czrc
 
 check_file_exist /Library/WebServer/Documents/.tern-project
+check_file_exist /Library/WebServer/Documents/.czrc
 
 sudo apachectl restart

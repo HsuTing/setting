@@ -37,11 +37,12 @@ check_command watchman
 packages="yo \
   create-react-native-app \
   react-vr-cli \
-  generator-cat \
   nsp \
-  git-open \
   commitizen \
+  cz-conventional-changelog \
   conventional-changelog \
+  generator-cat \
+  git-open \
   git+ssh://git@github.com:HsuTing/cat-bin.git"
 if ! type "yo" > /dev/null 2>&1; then
   exec_command \
@@ -53,8 +54,14 @@ else
   "yarn global upgrade $packages"
 fi
 
+cp ~/setting/nodejs/czrc ~/.czrc
+check_file_exist ~/.czrc
+
 check_command_exist yo
 check_command_exist create-react-native-app
 check_command_exist react-vr
-check_command_exist cat-bin
 check_command_exist nsp
+check_command_exist git-cz
+check_command_exist commitizen
+check_command_exist conventional-changelog
+check_command_exist cat-bin
