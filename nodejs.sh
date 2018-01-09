@@ -43,7 +43,7 @@ packages="yo \
   conventional-changelog \
   generator-cat \
   git-open \
-  git+ssh://git@github.com:HsuTing/cat-bin.git"
+  cat-bin"
 if ! type "yo" > /dev/null 2>&1; then
   exec_command \
   "install packages" \

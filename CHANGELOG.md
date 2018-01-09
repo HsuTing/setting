@@ -1,5 +1,10 @@
-<a name="1.0.0"></a>
-# 1.0.0 (2018-01-08)
+<a name="1.0.1"></a>
+## [1.0.1](https://github.com/HsuTing/setting/compare/4871d4f...v1.0.1) (2018-01-09)
+
+
+### Bug Fixes
+
+* **bash/check.sh:** nsp not work ([763a6f2](https://github.com/HsuTing/setting/commit/763a6f2))
 
 
 ### Features
