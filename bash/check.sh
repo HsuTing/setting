@@ -8,7 +8,7 @@ drawing-info() {
 
 cat-check() {
   drawing-info "node security check"
-  nsp check "$(pwd)/package.json"
+  nsp check $(pwd)
 
   if [ -f $(pwd)/.npmignore ]; then
     drawing-info "npm ignore check"
