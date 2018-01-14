@@ -1,5 +1,5 @@
-<a name="1.0.1"></a>
-## [1.0.1](https://github.com/HsuTing/setting/compare/4871d4f...v1.0.1) (2018-01-09)
+<a name="0.1.0"></a>
+# [0.1.0](https://github.com/HsuTing/setting/compare/4871d4f...v0.1.0) (2018-01-14)
 
 
 ### Bug Fixes
@@ -13,6 +13,7 @@
 * **Add new package:** Add `commitizen` to node.js ([4871d4f](https://github.com/HsuTing/setting/commit/4871d4f))
 * **bash/bashrc:** Can write custom command in bashrc ([18b32b5](https://github.com/HsuTing/setting/commit/18b32b5))
 * **cz-conventional-changelog:** Move cz-conventional-changelog to global package ([b8e9328](https://github.com/HsuTing/setting/commit/b8e9328))
+* **nodejs.sh:** use cat-bin with npm, not github ([09b0e28](https://github.com/HsuTing/setting/commit/09b0e28))
 
 
 
