@@ -1,3 +1,18 @@
+<a name=""></a>
+# [](https://github.com/HsuTing/setting/compare/v0.1.2...v) (2018-01-18)
+
+
+
+<a name="0.1.2"></a>
+## [0.1.2](https://github.com/HsuTing/setting/compare/v0.1.1...v0.1.2) (2018-01-18)
+
+
+### Features
+
+* **bash:** add new command: make-log ([3595615](https://github.com/HsuTing/setting/commit/3595615))
+
+
+
 <a name="0.1.1"></a>
 ## [0.1.1](https://github.com/HsuTing/setting/compare/v0.1.0...v0.1.1) (2018-01-18)
 

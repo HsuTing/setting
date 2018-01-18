@@ -84,6 +84,7 @@ Use to upgrade package.
   - `docker-editor`: help to use `docker`.
   - `setting`: command about this project.
   - `check`: check project.
+  - `make-log`: make CHANGELOG.md.
   - `note`: add notes.
 
 #### python
