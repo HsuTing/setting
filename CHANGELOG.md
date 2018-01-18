@@ -1,3 +1,13 @@
+<a name="0.1.1"></a>
+## [0.1.1](https://github.com/HsuTing/setting/compare/v0.1.0...v0.1.1) (2018-01-18)
+
+
+### Features
+
+* **bash/check.sh:** upgrade cat-bin ([7631d76](https://github.com/HsuTing/setting/commit/7631d76))
+
+
+
 <a name="0.1.0"></a>
 # [0.1.0](https://github.com/HsuTing/setting/compare/4871d4f...v0.1.0) (2018-01-14)
 
