@@ -10,7 +10,6 @@ export GREP_OPTIONS='--color=auto'
 
 alias count='git ls-files | xargs wc -l'
 alias bbs='ssh bbsu@ptt.cc'
-alias makeLog='conventional-changelog -p angular -i CHANGELOG.md -s -r 0'
 
 source ~/setting/bash/prompt.sh
 
@@ -22,6 +21,7 @@ source ~/setting/bash/docker.sh ## docker-editor
 source ~/setting/bash/setting.sh ## setting
 source ~/setting/bash/check.sh ## check
 source ~/setting/bash/note.sh ## note
+source ~/setting/bash/makeLog.sh ## make-log
 
 if [ -f ~/setting/bash/custom.sh ]; then
   source ~/setting/bash/custom.sh ## custom command
