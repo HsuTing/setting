@@ -19,6 +19,6 @@ cat-check() {
   yarn upgrade-interactive
 
   drawing-info "npm package check"
-  cat-bin check \
+  cat-bin check-package \
     -i bundle-loader?*
 }
