@@ -1,5 +1,15 @@
 <a name=""></a>
-# [](https://github.com/HsuTing/setting/compare/v0.1.2...v) (2018-01-18)
+# [](https://github.com/HsuTing/setting/compare/v0.1.3...v) (2018-01-20)
+
+
+
+<a name="0.1.3"></a>
+## [0.1.3](https://github.com/HsuTing/setting/compare/v0.1.2...v0.1.3) (2018-01-20)
+
+
+### Features
+
+* **bash:** modify make-log ([a6d85e8](https://github.com/HsuTing/setting/commit/a6d85e8))
 
 
 
