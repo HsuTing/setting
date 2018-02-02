@@ -21,7 +21,6 @@ source ~/setting/bash/docker.sh ## docker-editor
 source ~/setting/bash/setting.sh ## setting
 source ~/setting/bash/check.sh ## check
 source ~/setting/bash/note.sh ## note
-source ~/setting/bash/makeLog.sh ## make-log
 
 if [ -f ~/setting/bash/custom.sh ]; then
   source ~/setting/bash/custom.sh ## custom command

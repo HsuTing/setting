@@ -41,6 +41,7 @@ packages="yo \
   commitizen \
   cz-conventional-changelog \
   conventional-changelog \
+  standard-version \
   generator-cat \
   git-open \
   cat-bin"
@@ -64,4 +65,5 @@ check_command_exist nsp
 check_command_exist git-cz
 check_command_exist commitizen
 check_command_exist conventional-changelog
+check_command_exist standard-version
 check_command_exist cat-bin
