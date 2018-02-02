@@ -1,3 +1,17 @@
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+<a name="0.2.0"></a>
+# [0.2.0](https://github.com/HsuTing/setting/compare/v0.1.3...v0.2.0) (2018-02-02)
+
+
+### Features
+
+* **bash:** remove makeLog, add standard-version ([3cf75fe](https://github.com/HsuTing/setting/commit/3cf75fe))
+
+
+
 <a name=""></a>
 # [](https://github.com/HsuTing/setting/compare/v0.1.3...v) (2018-01-20)
 
@@ -49,6 +63,3 @@
 * **bash/bashrc:** Can write custom command in bashrc ([18b32b5](https://github.com/HsuTing/setting/commit/18b32b5))
 * **cz-conventional-changelog:** Move cz-conventional-changelog to global package ([b8e9328](https://github.com/HsuTing/setting/commit/b8e9328))
 * **nodejs.sh:** use cat-bin with npm, not github ([09b0e28](https://github.com/HsuTing/setting/commit/09b0e28))
-
-
-
