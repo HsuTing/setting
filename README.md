@@ -1,4 +1,4 @@
-# Setting(0.1.3)
+# Setting
 My setting of the terminal.
 
 ## Start
