@@ -35,6 +35,8 @@ check_command watchman
 
 # install packages
 packages="yo \
+  generator-cat \
+  git-open \
   create-react-native-app \
   react-vr-cli \
   nsp \
@@ -42,8 +44,7 @@ packages="yo \
   cz-conventional-changelog \
   conventional-changelog \
   standard-version \
-  generator-cat \
-  git-open \
+  pm2 \
   cat-bin"
 if ! type "yo" > /dev/null 2>&1; then
   exec_command \
@@ -66,4 +67,5 @@ check_command_exist git-cz
 check_command_exist commitizen
 check_command_exist conventional-changelog
 check_command_exist standard-version
+check_command_exist pm2
 check_command_exist cat-bin
