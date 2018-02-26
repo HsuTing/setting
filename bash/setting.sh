@@ -1,13 +1,15 @@
 setting () {
   case $1 in
     "--install")
-      local root=$(pwd)
+      local root=`pwd`
       cd ~/setting && ./install.sh
       cd $root
       ;;
 
     "--update")
+      local root=`pwd`
       cd ~/setting && git pull origin master
+      cd $root
       ;;
 
     "--goto")
