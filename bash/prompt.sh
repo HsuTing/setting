@@ -2,7 +2,7 @@
 function parse_git_branch() {
   local branch=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
 
-  if [ ! "${branch}" == "" ]; then
+  if [ "${branch}" != "" ]; then
     local status=`git status 2>&1 | tee`
     local isModified=`echo -n "${status}" 2> /dev/null | grep "modified:" &> /dev/null; echo "$?"`
     local isAhead=`echo -n "${status}" 2> /dev/null | grep "Your branch is ahead of" &> /dev/null; echo "$?"`
@@ -22,6 +22,15 @@ function parse_git_branch() {
     fi
   else
     printf ""
+  fi
+}
+
+# get current branch tag
+function get_git_tag() {
+  local tag=`git describe --abbrev=0 --tags 2> /dev/null`
+
+  if [ "$tag" != ""  ]; then
+    printf "${lightGrayBg} ${tag} ${nocolor}"
   fi
 }
 
@@ -49,7 +58,7 @@ function get_notes() {
   if [ "${num}" == 0 ]; then
     printf ""
   else
-    printf "${cyanBg} ${num} notes ${nocolorBg} "
+    printf "${cyanBg} ${num} notes ${nocolorBg}"
   fi
 }
 
@@ -62,10 +71,20 @@ function nonzero_return() {
   fi
 }
 
-gitBranch="${bold}\$(parse_git_branch)${normal}"
+# show user when user is from ssh
+function get_ssh_user() {
+  local user=`ps aux | grep "[s]shd: .*@.*"`
+
+  if [ $user -z ]; then
+    printf ""
+  else
+    printf "${yellow}⚡${darkGray}$1${nocolor} "
+  fi
+}
+
+gitBranch="\$(get_git_tag)${bold}\$(parse_git_branch)${normal}"
 symbol="${green}➜${nocolor} "
 dirPath="${cyan}\w${nocolor} "
 time="${blue}[\t]${nocolor} "
-user="${darkGrayBg}${bold} \u@\h ${nobold}${nocolorBg} "
 
-export PS1="\[\$(nonzero_return)\]\[${user}\]\[${time}\]\[${dirPath}\]\[\$(get_notes)\]\[${gitBranch}\]\n\[\$(get_virtual_env)\]${symbol}"
+export PS1="\[\$(nonzero_return)\]\[${time}\]\[${dirPath}\]\[\$(get_notes)\]\[${gitBranch}\]\n\[\$(get_virtual_env)\]\[\$(get_ssh_user \u@\h)\]\[${symbol}\]"
