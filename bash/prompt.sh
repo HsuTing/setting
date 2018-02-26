@@ -66,5 +66,6 @@ gitBranch="${bold}\$(parse_git_branch)${normal}"
 symbol="${green}➜${nocolor} "
 dirPath="${cyan}\w${nocolor} "
 time="${blue}[\t]${nocolor} "
+user="${darkGrayBg}${bold} \u@\h ${nobold}${nocolorBg} "
 
-export PS1="\[\$(nonzero_return)\]\[${time}\]\[${dirPath}\[\$(get_notes)\]${gitBranch}\]\n\[\$(get_virtual_env)\]${symbol}"
+export PS1="\[\$(nonzero_return)\]\[${user}\]\[${time}\]\[${dirPath}\]\[\$(get_notes)\]\[${gitBranch}\]\n\[\$(get_virtual_env)\]${symbol}"
